@@ -54,6 +54,10 @@ body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
+h1 {
+	display: inline-block;
+	margin-right: 10pt!important;
+}
 
 /* /General Styles */
 
@@ -123,9 +127,9 @@ body {
 	display: inline-block;
 	width: auto;
 }
-.contact span {
-	color: #e5553d;
-	text-decoration: underline;
+
+.wow {
+  visibility: visible!important;
 }
 
 /* /About Section */

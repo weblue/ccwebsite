@@ -20,3 +20,5 @@ function nextName(element) {
     }
     element.innerText = titleList[titleIndex];
 }
+
+setInterval(() => new WOW().init(), 8000);
