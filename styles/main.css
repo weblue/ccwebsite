@@ -11,7 +11,7 @@ body {
 	background-color: #212121;
 	color: white;
 	font-family: 'zona';
-	
+
 }
 @font-face {
 	font-family: 'zona';
@@ -34,6 +34,7 @@ body {
 	top: 0;
 	margin-right: 5%;
 	margin-top: 7vh;
+    z-index: 100000;
 }
 #nav li {
 	display: list-item;
@@ -54,6 +55,18 @@ body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
+
+a {
+    text-decoration: none;
+    color: #e5553d;
+    transition:.5s;
+    -webkit-transition:.5s;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
 h1 {
 	display: inline-block;
 	margin-right: 10pt!important;
@@ -148,7 +161,7 @@ h1 {
 
 @media only screen and (min-width: 550px) {
 	.content_section h1 {
-		font-size: 10pt; 
+		font-size: 10pt;
 	}
 	.content_section h2 {
 		font-size: 10pt;
@@ -157,11 +170,11 @@ h1 {
 	#nav li {
 		font-size: 10pt;
 	}
-} 
+}
 
 @media only screen and (min-width: 750px) {
 	.content_section h1 {
-		font-size: 14pt; 
+		font-size: 14pt;
 	}
 	.content_section h2 {
 		font-size: 14pt;
@@ -169,11 +182,11 @@ h1 {
 	#nav li {
 		font-size: 10pt;
 	}
-} 
+}
 
 @media only screen and (min-width: 1000px) {
 	.content_section h1 {
-		font-size: 18pt; 
+		font-size: 18pt;
 		margin: 0 0 10pt 0;
 	}
 	.content_section h2 {
@@ -183,38 +196,38 @@ h1 {
 	#nav li {
 		font-size: 12pt;
 	}
-} 
+}
 
 @media only screen and (min-width: 1200px) {
 	.content_section h1 {
-		font-size: 20pt; 
+		font-size: 20pt;
 	}
 	.content_section h2 {
 		font-size: 20pt;
 	}
-} 
+}
 
 @media only screen and (min-width: 1300px) {
 	.content_section h1 {
-		font-size: 22pt; 
+		font-size: 22pt;
 	}
 	.content_section h2 {
 		font-size: 22pt;
 	}
-} 
+}
 
 @media only screen and (min-width: 1600px) {
 	.content_section h1 {
-		font-size: 24pt; 
+		font-size: 24pt;
 	}
 	.content_section h2 {
 		font-size: 24pt;
 	}
-} 
+}
 
 @media only screen and (min-width: 1900px) {
 	.content_section h1 {
-		font-size: 24pt; 
+		font-size: 24pt;
 	}
 	.content_section h2 {
 		font-size: 24pt;
