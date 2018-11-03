@@ -35,6 +35,7 @@ $(document).ready(() => {
 $('#home_button').click(goHome);
 $('#about_button').click(goAbout);
 $('#contact_button').click(goContact);
+$('#offerings_button').click(goOfferings);
 
 function goHome() {
     $('#small_logo').hide();
@@ -49,4 +50,9 @@ function goAbout() {
 function goContact() {
     $('#small_logo').show();
     $('#wrapper').load('contact.html');
+}
+
+function goOfferings() {
+    $('#small_logo').show();
+    $('#wrapper').load('offerings.html');
 }
