@@ -147,6 +147,30 @@ h1 {
 
 /* /About Section */
 
+/* Offerings */
+
+#info_wrap {
+	width: 70%;
+	position: relative;
+	display: inline-block;
+	height: auto;
+	left: 15%; top: 50%;
+	transform: translate(-15%,-50%);
+}
+.info_container {
+	width: 33%;
+	position: relative;
+	display: inline-block;
+	font-size: 0;
+	background-color: antiquewhite;
+}
+.info_text {
+	width: 80%;
+	background-color: cadetblue;
+}
+
+/* /Offerings */
+
 /* Screen Resizing Section*/
 
 /* Desktop */
