@@ -5,7 +5,7 @@
 //TODO blog page
 //TODO projects page
 
-const timeBetweenAnim = 3000;
+const timeBetweenAnim = 6000;
 let titleIndex = 0;
 const titleList = ['Creators\'', 'Programmers\'', 'Photographers\'', 'Producers\'', 'Designers\'', 'Influencers\''];
 const colorList = ['#e5553d', '#bfb1d5', '#adddcf', '#abe1fd', '#f0e0a2'];
