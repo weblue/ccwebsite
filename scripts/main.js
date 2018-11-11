@@ -2,6 +2,9 @@
 //TODO offerings icons
 //TODO animation lock
 
+//TODO blog page
+//TODO projects page
+
 const timeBetweenAnim = 3000;
 let titleIndex = 0;
 const titleList = ['Creators\'', 'Programmers\'', 'Photographers\'', 'Producers\'', 'Designers\'', 'Influencers\''];
