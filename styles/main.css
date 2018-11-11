@@ -188,7 +188,6 @@ h1 {
 	height: auto;
 	left: 50%; top: 50%;
 	transform: translate(-50%,-50%);
-	background-color: green;
 }
 
 .info_container {
@@ -196,12 +195,10 @@ h1 {
 	position: relative;
 	display: inline-block;
 	font-size: 0;
-	background-color: antiquewhite;
 }
 
 .info_text {
 	width: 80%;
-	background-color: cadetblue;
 	position: relative;
 	display: inline-block;
 	left: 50%; transform: translateX(-50%);
