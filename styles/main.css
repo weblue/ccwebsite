@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .accentText {
-    color: #000000;
+    color: #212121;
 }
 
 /* General Styles*/
@@ -15,6 +15,16 @@ body {
     color: white;
     font-family: 'zona';
 }
+.page_transition {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 1s ease, transition 1s;
+}
+.page_transition_in {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: opacity 1s ease, transition 1s;
+}
 
 @font-face {
     font-family: 'zona';
@@ -25,6 +35,8 @@ body {
 
 #wrapper {
     position: relative;
+	transition: 1s ease;
+	transition-property: opacity, transform;
 }
 
 .section {
@@ -171,7 +183,7 @@ h1 {
 
 #info_wrap {
 	width: 100%;
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	height: auto;
 	left: 50%; top: 50%;
@@ -180,7 +192,7 @@ h1 {
 }
 
 .info_container {
-	width: 33%;
+	width: 32.5%;
 	position: relative;
 	display: inline-block;
 	font-size: 0;
@@ -191,10 +203,8 @@ h1 {
 	width: 80%;
 	background-color: cadetblue;
 	position: relative;
+	display: inline-block;
 	left: 50%; transform: translateX(-50%);
-}
-.info_text h1 {
-	color: #e5553d;
 }
 
 .info_text ol {
@@ -220,6 +230,12 @@ h1 {
     #nav li {
         font-size: 10pt;
     }
+	.info_text h1 {
+		font-size: 15pt;
+	}
+	.info_text ol {
+		font-size: 13pt;
+	}
 }
 
 @media only screen and (min-width: 750px) {
@@ -247,12 +263,6 @@ h1 {
 	}
 	#nav li {
 		font-size: 12pt;
-	}
-	.info_text h1 {
-		font-size: 15pt;
-	}
-	.info_text ol {
-		font-size: 13pt;
 	}
 }
 
@@ -323,21 +333,6 @@ h1 {
 
 /* Mobile */
 
-@media only screen and (max-aspect-ratio: 5/7) {
-    #nav li {
-        display: inline-block;
-        margin-right: 6pt;
-    }
-
-    #small_logo {
-        width: 10%;
-    }
-
-    .content_section {
-        width: 80%;
-    }
-}
-
 @media only screen and (min-width: 320px) and (max-aspect-ratio: 5/7) {
     #nav li {
         font-size: 7pt;
@@ -352,6 +347,12 @@ h1 {
         font-size: 10pt;
         margin: 0 0 30pt 10pt;
     }
+	.info_text h1 {
+		font-size: 14pt;
+	}
+	.info_text ol {
+		font-size: 12pt;
+	}
 }
 
 @media only screen and (min-width: 375px) and (max-aspect-ratio: 5/7) {
@@ -362,6 +363,27 @@ h1 {
     .content_section h2 {
         font-size: 12pt;
     }
+}
+
+@media only screen and (max-aspect-ratio: 5/7) {
+    #nav li {
+        display: inline-block;
+        margin-right: 6pt;
+    }
+
+    #small_logo {
+        width: 10%;
+    }
+
+    .content_section {
+        width: 80%;
+    }
+
+	.info_container {
+		width: 100%;
+		display: list-item;
+		margin-bottom: 30pt;
+	}
 }
 
 /* /Mobile */

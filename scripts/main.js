@@ -1,5 +1,6 @@
-//TODO animations
-//TODO offerings page
+//TODO fill content on offerings
+//TODO offerings icons
+//TODO animation lock
 
 const timeBetweenAnim = 3000;
 let titleIndex = 0;
@@ -17,9 +18,11 @@ function nextName(element) {
 }
 
 $(document).ready(() => {
-    goHome();
-
     ind = Math.floor(Math.random() * colorList.length);
+	
+	let accentStyle = getStyleRule('.accentText');
+    accentStyle.color = colorList[ind];
+	
     setInterval(() => {
         if (ind + 1 > colorList.length) {
             ind = 0;
@@ -31,9 +34,8 @@ $(document).ready(() => {
             color: colorList[ind]
         }, 750);
     }, 10000);
-
-    let accentStyle = getStyleRule('.accentText');
-    accentStyle.color = colorList[ind];
+    
+	goHome();
 
     // $(".accentText").css("color", colorList[ind]);
 
@@ -45,9 +47,9 @@ $(document).ready(() => {
 });
 
 $('#home_button').click(goHome);
-$('#about_button').click(goAbout);
-$('#contact_button').click(goContact);
-$('#offerings_button').click(goOfferings);
+$('#about_button').click(() => go('about'));
+$('#contact_button').click(() => go('contact'));
+$('#offerings_button').click(() => go('offerings'));
 
 function goHome() {
     timer = setInterval(() => {
@@ -59,36 +61,38 @@ function goHome() {
             textEle.classList.add("animateFadeIn");
         }, 1000);
     }, timeBetweenAnim);
+	
+	if ($('#wrapper').hasClass('page_transition_in'))
+		$('#wrapper').removeClass('page_transition_in');
+	$('#wrapper').addClass('page_transition');
 
-    $('#small_logo').hide();
-    $('#wrapper').load('home.html');
-
-    let accentStyle = getStyleRule('.accentText');
-    accentStyle.color = colorList[ind];
-}
-
-function goAbout() {
-    clearInterval(timer);
-    $('#small_logo').show();
-    $('#wrapper').load('about.html');
-
-    let accentStyle = getStyleRule('.accentText');
-    accentStyle.color = colorList[ind];
-}
-
-function goContact() {
-    clearInterval(timer);
-    $('#small_logo').show();
-    $('#wrapper').load('contact.html');
+	if ($('#small_logo').css('display') !== 'none')
+		$('#small_logo').fadeOut(1000);
+	
+	setTimeout(() => {
+    	$('#wrapper').load('home.html', () => {
+			$('#wrapper').removeClass('page_transition');
+			$('#wrapper').addClass('page_transition_in');
+		});
+	}, 1000);
 
     let accentStyle = getStyleRule('.accentText');
     accentStyle.color = colorList[ind];
 }
 
-function goOfferings() {
-    clearInterval(timer);
-    $('#small_logo').show();
-    $('#wrapper').load('offerings.html');
+function go(location) {
+	clearInterval(timer);
+	if ($('#wrapper').hasClass('page_transition_in'))
+		$('#wrapper').removeClass('page_transition_in');
+	$('#wrapper').addClass('page_transition');
+	
+	setTimeout(() => {
+		$('#small_logo').fadeIn(1000);
+    	$('#wrapper').load(`${location}.html`, () => {
+			$('#wrapper').removeClass('page_transition');
+			$('#wrapper').addClass('page_transition_in');
+		});
+	}, 1000);
 
     let accentStyle = getStyleRule('.accentText');
     accentStyle.color = colorList[ind];
