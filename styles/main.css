@@ -170,30 +170,31 @@ h1 {
 /* Offerings */
 
 #info_wrap {
-    width: 100%;
-    position: relative;
-    display: inline-block;
-    height: auto;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /*	background-color: green;*/
+	width: 100%;
+	position: relative;
+	display: inline-block;
+	height: auto;
+	left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: green;
 }
 
 .info_container {
-    width: 33%;
-    position: relative;
-    display: inline-block;
-    font-size: 0;
-    /*	background-color: antiquewhite;*/
+	width: 33%;
+	position: relative;
+	display: inline-block;
+	font-size: 0;
+	background-color: antiquewhite;
 }
 
 .info_text {
-    width: 80%;
-    /*	background-color: cadetblue;*/
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+	width: 80%;
+	background-color: cadetblue;
+	position: relative;
+	left: 50%; transform: translateX(-50%);
+}
+.info_text h1 {
+	color: #e5553d;
 }
 
 .info_text ol {
@@ -236,63 +237,86 @@ h1 {
 }
 
 @media only screen and (min-width: 1000px) {
-    .content_section h1 {
-        font-size: 18pt;
-        margin: 0 0 10pt 0;
-    }
-
-    .content_section h2 {
-        font-size: 18pt;
-        margin: 0 0 50pt 30pt;
-    }
-
-    #nav li {
-        font-size: 12pt;
-    }
+	.content_section h1 {
+		font-size: 18pt;
+		margin: 0 0 10pt 0;
+	}
+	.content_section h2 {
+		font-size: 18pt;
+		margin: 0 0 50pt 30pt;
+	}
+	#nav li {
+		font-size: 12pt;
+	}
+	.info_text h1 {
+		font-size: 15pt;
+	}
+	.info_text ol {
+		font-size: 13pt;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
-    .content_section h1 {
-        font-size: 20pt;
-    }
-
-    .content_section h2 {
-        font-size: 20pt;
-    }
+	.content_section h1 {
+		font-size: 20pt;
+	}
+	.content_section h2 {
+		font-size: 20pt;
+	}
+	.info_text h1 {
+		font-size: 17pt;
+	}
+	.info_text ol {
+		font-size: 15pt;
+	}
 }
 
 @media only screen and (min-width: 1300px) {
-    .content_section h1 {
-        font-size: 22pt;
-    }
-
-    .content_section h2 {
-        font-size: 22pt;
-    }
+	.content_section h1 {
+		font-size: 22pt;
+	}
+	.content_section h2 {
+		font-size: 22pt;
+	}
+	.info_text h1 {
+		font-size: 19pt;
+	}
+	.info_text ol {
+		font-size: 17pt;
+	}
 }
 
 @media only screen and (min-width: 1600px) {
-    .content_section h1 {
-        font-size: 24pt;
-    }
-
-    .content_section h2 {
-        font-size: 24pt;
-    }
+	.content_section h1 {
+		font-size: 24pt;
+	}
+	.content_section h2 {
+		font-size: 24pt;
+	}
+	.info_text h1 {
+		font-size: 21pt;
+	}
+	.info_text ol {
+		font-size: 19pt;
+	}
 }
 
 @media only screen and (min-width: 1900px) {
-    .content_section h1 {
-        font-size: 24pt;
-    }
-
-    .content_section h2 {
-        font-size: 24pt;
-    }
-
-    .content_section li {
-        font-size: 20pt;
-    }
+	.content_section h1 {
+		font-size: 24pt;
+	}
+	.content_section h2 {
+		font-size: 24pt;
+	}
+	.content_section li {
+		font-size: 20pt;
+	}
+	.info_text h1 {
+		font-size: 24pt;
+	}
+	.info_text ol {
+		font-size: 20pt;
+	}
 }
 
 /* /Desktop */
